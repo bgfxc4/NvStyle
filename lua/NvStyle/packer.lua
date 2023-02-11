@@ -11,8 +11,14 @@ end
 
 local packer_bootstrap = ensure_packer()
 
-return require('packer').startup(function(use)
+return require('packer').startup({ function(use)
 	use 'wbthomason/packer.nvim'
+    use {
+        'lewis6991/impatient.nvim',
+        config = function()
+            require('impatient')
+        end
+    }
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.1',
 		requires = { {'nvim-lua/plenary.nvim'} }
@@ -91,7 +97,15 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
+    use('tpope/vim-dadbod')
+    use('kristijanhusak/vim-dadbod-ui')
     if packer_bootstrap then
         require('packer').sync()
     end
-end)
+end,
+config = {
+    profile = {
+        enable = true,
+        threshold = 0 -- the amount in ms that a plugin's load time must be over for it to be included in the profile
+    }
+}})
