@@ -131,6 +131,15 @@ ins_left {
 
 ins_left { 'location' }
 
+ins_left {
+    function ()
+        if vim.bo.filetype ~= "text" then
+            return ""
+        end
+        return "wc:" .. tostring(vim.fn.wordcount().words)
+    end
+}
+
 ins_left { 'progress', color = { fg = colors.fg, gui = 'bold' } }
 
 ins_left {
@@ -184,7 +193,7 @@ ins_right {
 ins_right {
   'fileformat',
   fmt = string.upper,
-  icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
+  icons_enabled = true, -- I think icons are cool but Eviline doesn't have them. sigh
   color = { fg = colors.green, gui = 'bold' },
 }
 

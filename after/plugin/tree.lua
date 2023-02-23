@@ -76,7 +76,7 @@ local options = {
 
 vim.g.nvimtree_side = options.view.side
 
-vim.keymap.set("n", "<leader>n", vim.cmd.NvimTreeToggle)
+vim.keymap.set("n", "<leader>n", function() vim.cmd.DBUIClose(); vim.cmd.NvimTreeToggle() end)
 vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeFocus)
 
 nvimtree.setup(options)
