@@ -21,7 +21,7 @@ db.setup({
 			{
 				desc = '☭ Programming',
 				group = 'DiagnosticHint',
-				action = 'Telescope find_files cwd=~/Dokumente/_Programming/',
+				action = 'Telescope find_files cwd=~/Documents/Programming/',
 				key = 'a',
 			},
 			{
