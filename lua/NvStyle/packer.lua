@@ -100,6 +100,7 @@ return require('packer').startup({ function(use)
     use('tpope/vim-dadbod')
     use('kristijanhusak/vim-dadbod-ui')
     use('NvChad/nvim-colorizer.lua')
+    use('hedyhli/outline.nvim')
     if packer_bootstrap then
         require('packer').sync()
     end
