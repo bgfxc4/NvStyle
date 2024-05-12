@@ -101,6 +101,10 @@ return require('packer').startup({ function(use)
     use('kristijanhusak/vim-dadbod-ui')
     use('NvChad/nvim-colorizer.lua')
     use('hedyhli/outline.nvim')
+	use {
+		'folke/todo-comments.nvim',
+		requires = { {'nvim-lua/plenary.nvim'} }
+	}
     if packer_bootstrap then
         require('packer').sync()
     end
