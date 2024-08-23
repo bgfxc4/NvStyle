@@ -41,6 +41,7 @@ return require('packer').startup({ function(use)
 			{'neovim/nvim-lspconfig'},             -- Required
 			{'williamboman/mason.nvim'},           -- Optional
 			{'williamboman/mason-lspconfig.nvim'}, -- Optional
+            {'klen/nvim-config-local'}, -- support for local config files 
 
 			-- Autocompletion
 			{'hrsh7th/nvim-cmp'},         -- Required

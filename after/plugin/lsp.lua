@@ -44,4 +44,12 @@ lsp.configure('lua_ls', {
     }
 })
 
+lsp.configure('ltex', {
+    settings = {
+        ltex = {
+            language = "de-DE"
+        }
+    }
+})
+
 lsp.setup()
