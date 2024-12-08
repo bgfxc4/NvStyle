@@ -46,10 +46,29 @@ lsp.configure('lua_ls', {
 
 lsp.configure('ltex', {
     settings = {
+        filetypes = { "bib", "gitcommit", "markdown", "org", "plaintex", "rst", "rnoweb", "tex", "pandoc", "quarto", "rmd", "context", "mail", "text" },
         ltex = {
             language = "de-DE"
         }
     }
+})
+
+lsp.configure('pylsp', {
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          maxLineLength = 200
+        }
+      }
+    }
+  }
+})
+
+lsp.configure('lemminx', {
+  settings = {
+    filetypes = { "xml", "xsd", "xsl", "xslt", "svg", "sdf", "urdf" }
+  }
 })
 
 lsp.setup()
