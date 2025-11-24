@@ -106,6 +106,12 @@ return require('packer').startup({ function(use)
 		'folke/todo-comments.nvim',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+    use('github/copilot.vim')
+    use{'CopilotC-Nvim/CopilotChat.nvim',
+        requires = {
+            'github/copilot.vim',
+        }
+    }
     if packer_bootstrap then
         require('packer').sync()
     end

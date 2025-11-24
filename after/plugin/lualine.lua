@@ -84,6 +84,14 @@ ins_left {
 }
 
 ins_left {
+  function()
+    return vim.g.currentContainer
+  end,
+  color = { fg = colors.green },
+  padding = { left = 1, right = 1 },
+}
+
+ins_left {
   -- mode component
   function()
     return ''
